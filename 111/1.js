@@ -24,5 +24,5 @@
 // console.log(i);
 
 //z5
-for( let i=100; i>0; i--)
-console.log(i);
+// for( let i=100; i>0; i--)
+// console.log(i);
