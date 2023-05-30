@@ -5,7 +5,7 @@
 // }
 // console.log(a);
 
-const { acceptsEncoding } = require("express/lib/request");
+// const { acceptsEncoding } = require("express/lib/request");
 
 //z2
 // a=[];
@@ -16,13 +16,13 @@ const { acceptsEncoding } = require("express/lib/request");
 // console.log(a);
 
 //z3
-let a=[1,2,3,4,-5,6,-1,8];
-let b=[];
-for(let i=0; i<=length; i++)
-{
- if(a[i]>0)
- {
- b[i].push(a);
- }
-}
-console.log(b);
+// let a=[1,2,3,4,-5,6,-1,8];
+// let b=[];
+// for(let i=0; i<=length; i++)
+// {
+//  if(a[i]>0)
+//  {
+//  b[i].push(a);
+//  }
+// }
+// console.log(b);
