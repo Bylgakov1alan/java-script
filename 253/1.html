@@ -5,26 +5,39 @@
  <meta charset="UTF-8" />
  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>Метод every для проверки массива в JavaScript</title>
+ <title>Цепочки методов и свойств в JavaScript</title>
+</head>
+<style></style>
+
+<body>
+
+ <img id="image" src="avatar.png">
+
+ <img id="image2" src="avatar.png" width="300" height="500">
 
  <script>
+
   console.log("====================== 1 ========================");
 
-  let arr = [0, 0, 0];
-
-  let result = arr.some((elem) => elem > 0);
-  console.log(result);
+  document.querySelector('#image').src = 'favicon.ico';
 
   console.log("====================== 2 ========================");
 
-  let arr2 = [2, 4, 6, 8, 30];
+  /*
+  console.log(document.querySelector('#image2').src);
+  console.log(document.querySelector('#image2').width);
+  console.log(document.querySelector('#image2').height);
 
-  let result2 = arr2.some((elem, index) => elem * index < 30);
-  console.log(result2);
+  Ошибка состоит в том, что из-за поиска 
+  айди, браузер несколько раз выполняет одно и тоже действие несколько раз
+  */
+
+  let img2 = document.querySelector('#image2');
+  img2.src = 'favicon.ico'
+  img2.height = '100'
+  img2.width = '200'
 
  </script>
-</head>
-
-<body></body>
+</body>
 
 </html>
