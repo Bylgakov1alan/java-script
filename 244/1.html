@@ -5,26 +5,37 @@
  <meta charset="UTF-8" />
  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>Метод every для проверки массива в JavaScript</title>
+ <title>Один обработчик ко многим элементам в JavaScript</title>
+</head>
+
+<body>
+
+ <p id="elem1">text</p>
+ <p id="elem2">text</p>
+ <p id="elem3">text</p>
+ <p id="elem4">text</p>
+ <p id="elem5">text</p>
 
  <script>
   console.log("====================== 1 ========================");
 
-  let arr = [0, 0, 0];
+  let p1 = document.querySelector("#elem1");
+  let p2 = document.querySelector("#elem2");
+  let p3 = document.querySelector("#elem3");
+  let p4 = document.querySelector("#elem4");
+  let p5 = document.querySelector("#elem5");
 
-  let result = arr.some((elem) => elem > 0);
-  console.log(result);
+  p1.addEventListener('click', func);
+  p2.addEventListener('click', func);
+  p3.addEventListener('click', func);
+  p4.addEventListener('click', func);
+  p5.addEventListener('click', func);
 
-  console.log("====================== 2 ========================");
-
-  let arr2 = [2, 4, 6, 8, 30];
-
-  let result2 = arr2.some((elem, index) => elem * index < 30);
-  console.log(result2);
+  function func() {
+   console.log("message");
+  }
 
  </script>
-</head>
-
-<body></body>
+</body>
 
 </html>
