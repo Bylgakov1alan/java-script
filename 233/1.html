@@ -5,22 +5,26 @@
  <meta charset="UTF-8" />
  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>Метод every для проверки массива в JavaScript</title>
+ <title>Определение високосного года в JavaScript</title>
 
  <script>
+
   console.log("====================== 1 ========================");
 
-  let arr = [0, 0, 0];
+  function isLeap() {
+   if (new Date().getDate() == 29) {
+    return true;
+   } else {
+    return false;
+   }
 
-  let result = arr.some((elem) => elem > 0);
-  console.log(result);
+  }
+  if (isLeap == true) {
+   console.log("Високосный");
+  } else {
+   console.log("Обычный");
+  }
 
-  console.log("====================== 2 ========================");
-
-  let arr2 = [2, 4, 6, 8, 30];
-
-  let result2 = arr2.some((elem, index) => elem * index < 30);
-  console.log(result2);
 
  </script>
 </head>
