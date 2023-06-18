@@ -5,22 +5,38 @@
  <meta charset="UTF-8" />
  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>Метод every для проверки массива в JavaScript</title>
+ <title>Оператор spread для строк и чисел в JavaScript</title>
 
  <script>
   console.log("====================== 1 ========================");
 
-  let arr = [0, 0, 0];
+  let arr = [..."12345"];
+  console.log(arr);
 
-  let result = arr.some((elem) => elem > 0);
-  console.log(result);
+  // ['1', '2', '3', '4', '5']
 
   console.log("====================== 2 ========================");
 
-  let arr2 = [2, 4, 6, 8, 30];
+  let arr2 = ["a", ..."12345"];
+  console.log(arr2);
 
-  let result2 = arr2.some((elem, index) => elem * index < 30);
-  console.log(result2);
+  // ["a", '1', '2', '3', '4', '5']
+
+  console.log("====================== 3 ========================");
+
+  let arr3 = [..."12345", ..."56789"];
+  console.log(arr3);
+
+  // ['1', '2', '3', '4', '5', '5', '6', '7', '8', '9']
+
+  console.log("====================== 4 ========================");
+
+  let arr41 = ["a", "b", "c"];
+  let arr42 = [...arr41, ..."12345"];
+
+  console.log(arr42);
+
+         // ["a", "b", "c", '1', '2', '3', '4', '5']
 
  </script>
 </head>
