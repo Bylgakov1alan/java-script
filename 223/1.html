@@ -5,22 +5,24 @@
  <meta charset="UTF-8" />
  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>Метод every для проверки массива в JavaScript</title>
+ <title>Форматирование даты в JavaScript</title>
 
  <script>
+  let date = new Date();
+
   console.log("====================== 1 ========================");
 
-  let arr = [0, 0, 0];
+  function addZero(num) {
+   if (num >= 0 && num <= 9) {
+    return "0" + num;
+   } else {
+    return num;
+   }
+  }
 
-  let result = arr.some((elem) => elem > 0);
-  console.log(result);
-
-  console.log("====================== 2 ========================");
-
-  let arr2 = [2, 4, 6, 8, 30];
-
-  let result2 = arr2.some((elem, index) => elem * index < 30);
-  console.log(result2);
+  console.log(
+   addZero(date.getHours()) + ':' + addZero(date.getMinutes()) + ':' + addZero(date.getSeconds()) + ' ' +
+   addZero(date.getDate()) + '.' + addZero(date.getMonth() + 1) + '.' + date.getFullYear());
 
  </script>
 </head>
