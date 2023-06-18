@@ -5,26 +5,46 @@
  <meta charset="UTF-8" />
  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>Метод every для проверки массива в JavaScript</title>
+ <title>Работа с текстовыми полями в JavaScript</title>
+</head>
+<style>
+ .task {
+  width: 200px;
+  margin: 40px;
+  border: 1px solid black;
+  padding: 15px;
+ }
+</style>
+
+<body>
+
+ <div class="task">
+  <input id="elem1" type="email">
+  <button id="btn1">button</button>
+  <button id="btn2">button</button>
+  <p id="p1"></p>
+ </div>
 
  <script>
   console.log("====================== 1 ========================");
 
-  let arr = [0, 0, 0];
+  let input1 = document.querySelector("#elem1");
+  let button1 = document.querySelector("#btn1");
 
-  let result = arr.some((elem) => elem > 0);
-  console.log(result);
+  button1.addEventListener('click', () => {
+   input1.value = 'text'
+  })
 
   console.log("====================== 2 ========================");
 
-  let arr2 = [2, 4, 6, 8, 30];
+  let button2 = document.querySelector("#btn2");
+  let p1 = document.querySelector("#p1");
 
-  let result2 = arr2.some((elem, index) => elem * index < 30);
-  console.log(result2);
+  button2.addEventListener('click', () => {
+   p1.textContent = input1.value
+  })
 
  </script>
-</head>
-
-<body></body>
+</body>
 
 </html>
