@@ -5,26 +5,30 @@
  <meta charset="UTF-8" />
  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>Метод every для проверки массива в JavaScript</title>
+ <title>Именованные обработчики событий в JavaScript</title>
+</head>
+
+<body>
+ <input id="button1" type="submit" value="button1" />
+ <input id="button2" type="submit" value="button2" />
 
  <script>
   console.log("====================== 1 ========================");
 
-  let arr = [0, 0, 0];
+  let button1 = document.querySelector("#button1");
+  button1.addEventListener("click", func1);
 
-  let result = arr.some((elem) => elem > 0);
-  console.log(result);
+  let button2 = document.querySelector("#button2");
+  button2.addEventListener("click", func2);
 
-  console.log("====================== 2 ========================");
+  function func1() {
+   console.log(1);
+  }
 
-  let arr2 = [2, 4, 6, 8, 30];
-
-  let result2 = arr2.some((elem, index) => elem * index < 30);
-  console.log(result2);
-
+  function func2() {
+   console.log(2);
+  }
  </script>
-</head>
-
-<body></body>
+</body>
 
 </html>
