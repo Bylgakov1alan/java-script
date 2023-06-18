@@ -5,22 +5,23 @@
  <meta charset="UTF-8" />
  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>Метод every для проверки массива в JavaScript</title>
+ <title>Работа с объектом Date в JavaScript</title>
 
  <script>
+
+  let date = new Date();
+
   console.log("====================== 1 ========================");
 
-  let arr = [0, 0, 0];
-
-  let result = arr.some((elem) => elem > 0);
-  console.log(result);
+  console.log(`Текущий день: ${date.getDate()}`)
 
   console.log("====================== 2 ========================");
 
-  let arr2 = [2, 4, 6, 8, 30];
+  console.log(`Текущий месяц: ${date.getMonth() + 1}`)
 
-  let result2 = arr2.some((elem, index) => elem * index < 30);
-  console.log(result2);
+  console.log("====================== 3 ========================");
+
+  console.log(`Текущий год: ${date.getFullYear()}`)
 
  </script>
 </head>
