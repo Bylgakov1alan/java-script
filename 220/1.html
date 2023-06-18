@@ -5,22 +5,24 @@
  <meta charset="UTF-8" />
  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>Метод every для проверки массива в JavaScript</title>
+ <title>
+  Объявление переменных при деструктуризации объектов в JavaScript
+ </title>
 
  <script>
   console.log("====================== 1 ========================");
 
-  let arr = [0, 0, 0];
+  let obj = {
+   year: 2025,
+   month: 12,
+   day: 31,
+  };
 
-  let result = arr.some((elem) => elem > 0);
-  console.log(result);
+  let year, month, day; // объявим переменные заранее
 
-  console.log("====================== 2 ========================");
+  // {year, month, day} = obj; // не будет работать
 
-  let arr2 = [2, 4, 6, 8, 30];
-
-  let result2 = arr2.some((elem, index) => elem * index < 30);
-  console.log(result2);
+  ({ year, month, day } = obj);
 
  </script>
 </head>
