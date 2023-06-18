@@ -5,25 +5,23 @@
  <meta charset="UTF-8" />
  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>Решение проблемы с контекстом в JavaScript</title>
+ <title>Ссылка на удаление элемента на JavaScript</title>
 </head>
 
 <body>
- <input id="elem" value="3" />
+ <div id="parent">
+  <p id="elem">text</p>
+  <a href="" id="remove">remove</a>
+ </div>
  <script>
   window.onload = function () {
-   "use strict";
-
    let elem = document.querySelector("#elem");
-   elem.addEventListener("blur", func);
+   let remove = document.querySelector("#remove");
 
-   function func() {
-    alert(square.call(this));
-
-    function square() {
-     return this.value * this.value;
-    }
-   }
+   remove.addEventListener("click", function (event) {
+    elem.remove();
+    event.preventDefault();
+   });
   };
  </script>
 </body>
