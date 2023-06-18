@@ -5,26 +5,32 @@
  <meta charset="UTF-8" />
  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>Метод every для проверки массива в JavaScript</title>
+ <title>Работа с HTML кодом элементов на JavaScript</title>
+</head>
+
+<body>
+ <p id="p1"><span>hello world</span></p>
+ <button id="btn1">button</button>
+ <button id="btn2">button</button>
 
  <script>
   console.log("====================== 1 ========================");
 
-  let arr = [0, 0, 0];
+  let p1 = document.querySelector("#p1");
+  let btn1 = document.querySelector("#btn1");
 
-  let result = arr.some((elem) => elem > 0);
-  console.log(result);
+  btn1.addEventListener("click", () => {
+   console.log(p1.innerHTML);
+  });
 
   console.log("====================== 2 ========================");
 
-  let arr2 = [2, 4, 6, 8, 30];
+  let btn2 = document.querySelector("#btn2");
 
-  let result2 = arr2.some((elem, index) => elem * index < 30);
-  console.log(result2);
-
+  btn2.addEventListener("click", () => {
+   p1.innerHTML = `<b>${p1.textContent}</b>`
+  });
  </script>
-</head>
-
-<body></body>
+</body>
 
 </html>
