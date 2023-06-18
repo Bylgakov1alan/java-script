@@ -5,26 +5,45 @@
  <meta charset="UTF-8" />
  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>Метод every для проверки массива в JavaScript</title>
+ <title>Объект this в JavaScript</title>
+</head>
+<style></style>
+
+<body>
+
+ <input id="input" type="text" value="Инпут">
+ <button id="btn">0</button>
 
  <script>
+
   console.log("====================== 1 ========================");
 
-  let arr = [0, 0, 0];
+  let input = document.querySelector('#input');
 
-  let result = arr.some((elem) => elem > 0);
-  console.log(result);
+  input.addEventListener('focus', funcFocus);
+
+  function funcFocus() {
+   this.value = '1';
+  };
+
+  input.addEventListener('blur', funcBlur);
+
+  function funcBlur() {
+   this.value = '2';
+  };
 
   console.log("====================== 2 ========================");
 
-  let arr2 = [2, 4, 6, 8, 30];
+  let button = document.querySelector("#btn");
 
-  let result2 = arr2.some((elem, index) => elem * index < 30);
-  console.log(result2);
+  button.addEventListener("click", addOne);
+
+  function addOne() {
+   let sum = (Number(this.textContent) + 1)
+   this.textContent = sum
+  }
 
  </script>
-</head>
-
-<body></body>
+</body>
 
 </html>
